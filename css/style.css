@@ -1,0 +1,347 @@
+:root {
+    --cor-fundo: #f4f1ea;
+    --cor-card: #ffffff;
+    --cor-texto: #1f1f1f;
+    --cor-texto-secundario: #6b6b6b;
+    --cor-principal: #8b5e3c;
+    --cor-borda: #ded8cf;
+}
+
+/* Temas */
+body[data-tema="escuro"] {
+    --cor-fundo: #1f1f1f;
+    --cor-card: #2b2b2b;
+    --cor-texto: #f5f5f5;
+    --cor-texto-secundario: #bdbdbd;
+    --cor-principal: #d49a6a;
+    --cor-borda: #444444;
+}
+
+body[data-tema="papel"] {
+    --cor-fundo: #ddd0b8;
+    --cor-card: #f5ead8;
+    --cor-texto: #2d241c;
+    --cor-texto-secundario: #6b5c4d;
+    --cor-principal: #795334;
+    --cor-borda: #c7b79d;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+button, input, textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.cabecalho {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    letter-spacing: 0.5px;
+}
+
+.logo p {
+    margin-top: 4px;
+    color: var(--cor-texto-secundario);
+}
+
+#botaoTema, .botao-adicionar {
+    border: 0;
+    background-color: var(--cor-principal);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#botaoTema {
+    padding: 10px 18px;
+}
+
+.botao-adicionar {
+    grid-column: 1 / -1;
+    padding: 14px;
+}
+
+#botaoTema:hover, .botao-adicionar:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.apresentacao {
+    text-align: center;
+    padding: 70px 0 50px;
+}
+
+.apresentacao h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.apresentacao p {
+    color: var(--cor-texto-secundario);
+}
+
+.cadastro {
+    background-color: var(--cor-card);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda);
+}
+
+.cadastro h2 {
+    margin-bottom: 24px;
+}
+
+#formLivro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-weight: bold;
+}
+
+.campo input, .campo textarea, #pesquisa {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+    color: var(--cor-texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input {
+    background: transparent;
+}
+
+.campo textarea {
+    background: transparent;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.campo input:focus, .campo textarea:focus, #pesquisa:focus {
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.15);
+}
+
+.biblioteca {
+    padding: 70px 0;
+}
+
+.biblioteca-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#pesquisa {
+    width: 280px;
+    background-color: var(--cor-card);
+}
+
+.lista-livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.mensagem-vazia {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    padding: 40px;
+}
+
+.livro {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.livro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.livro img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    display: block;
+    background-color: #e8e2d8;
+}
+
+.livro-info {
+    padding: 18px;
+}
+
+.livro-info h3 {
+    margin-bottom: 8px;
+}
+
+.livro-info p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 6px;
+}
+
+.livro-info span {
+    font-size: 0.9rem;
+    color: var(--cor-principal);
+}
+
+.livro-info button {
+    margin-top: 15px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #b54848;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.livro-info button:hover {
+    opacity: 0.8;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    position: relative;
+    width: min(600px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background-color: var(--cor-card);
+    color: var(--cor-texto);
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: aparecer 0.25s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: 0;
+    background: transparent;
+    color: var(--cor-texto);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.fechar-modal:hover {
+    color: var(--cor-principal);
+}
+
+.detalhes-titulo {
+    margin-bottom: 10px;
+    color: var(--cor-principal);
+}
+
+.detalhes-autor {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 8px;
+}
+
+.detalhes-info {
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+}
+
+.detalhes-subtitulo {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.detalhes-texto {
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .cabecalho-conteudo, .biblioteca-topo {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #formLivro {
+        grid-template-columns: 1fr;
+    }
+
+    #pesquisa {
+        width: 100%;
+    }
+
+    .apresentacao h2 {
+        font-size: 1.8rem;
+    }
+
+    .modal-conteudo {
+        padding: 24px;
+    }
+}

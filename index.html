@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estante | Biblioteca Digital</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <div class="logo">
+                <h1>Estante</h1>
+                <p>Sua biblioteca digital pessoal</p>
+            </div>
+
+            <button id="botaoTema" type="button">
+                Mudar tema
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Apresentação -->
+        <section class="apresentacao">
+
+            <h2>Organize seus livros em um só lugar.</h2>
+
+            <p>
+                Adicione, pesquise e organize os livros da sua coleção.
+            </p>
+
+        </section>
+
+
+        <!-- Cadastro -->
+        <section class="cadastro">
+
+            <h2>Adicionar livro</h2>
+
+            <form id="formLivro">
+
+                <!-- Título -->
+                <div class="campo">
+
+                    <label for="titulo">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Digite o título do livro"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Autor -->
+                <div class="campo">
+
+                    <label for="autor">
+                        Autor
+                    </label>
+
+                    <input
+                        type="text"
+                        id="autor"
+                        placeholder="Digite o nome do autor"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Ano -->
+                <div class="campo">
+
+                    <label for="ano">
+                        Ano
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ano"
+                        placeholder="Ex: 2024"
+                    >
+
+                </div>
+
+
+                <!-- Gênero -->
+                <div class="campo">
+
+                    <label for="genero">
+                        Gênero
+                    </label>
+
+                    <input
+                        type="text"
+                        id="genero"
+                        placeholder="Ex: Fantasia"
+                    >
+
+                </div>
+
+
+                <!-- Descrição -->
+                <div class="campo">
+
+                    <label for="descricao">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricao"
+                        placeholder="Digite uma breve descrição do livro"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Capa -->
+                <div class="campo">
+
+                    <label for="capa">
+                        Capa do livro
+                    </label>
+
+                    <input
+                        type="file"
+                        id="capa"
+                        accept="image/*"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Botão -->
+                <button
+                    type="submit"
+                    class="botao-adicionar"
+                >
+                    Adicionar livro
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Biblioteca -->
+        <section class="biblioteca">
+
+            <div class="biblioteca-topo">
+
+                <h2>Minha coleção</h2>
+
+                <input
+                    type="search"
+                    id="pesquisa"
+                    placeholder="Pesquisar livro..."
+                >
+
+            </div>
+
+
+            <!-- Lista de livros -->
+            <div
+                id="listaLivros"
+                class="lista-livros"
+            >
+
+                <p class="mensagem-vazia">
+                    Sua estante ainda está vazia.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Modal de detalhes -->
+    <div
+        id="modalDetalhes"
+        class="modal"
+    >
+
+        <div class="modal-conteudo">
+
+            <button
+                id="fecharModal"
+                class="fechar-modal"
+                type="button"
+            >
+                &times;
+            </button>
+
+            <div id="detalhesLivro"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
