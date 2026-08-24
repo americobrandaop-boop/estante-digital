@@ -6,7 +6,7 @@ Sua biblioteca digital pessoal — organize, pesquise e explore seus livros em u
 
 ## Acesse aqui
 
-[Em breve: GitHub Pages]
+[Estante Digital](https://americobrandaop-boop.github.io/estante-digital/)
 
 ## Funcionalidades
 
