@@ -6,7 +6,7 @@ Sua biblioteca digital pessoal — organize, pesquise e explore seus livros em u
 
 ## Acesse aqui
 
-[Estante Digital](https://americobrandaop-boop.github.io/estante-digital/)
+[Estante Digital]([https://americobrandaop-boop.github.io/estante-digital/](https://estante-apb.netlify.app/))
 
 ## Funcionalidades
 
