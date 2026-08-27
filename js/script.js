@@ -18,8 +18,6 @@ const fecharModal = document.getElementById("fecharModal");
 let livros = JSON.parse(localStorage.getItem("livros")) || [];
 
 
-// Cadastrar livro
-
 formLivro.addEventListener("submit", function (event) {
 
     event.preventDefault();
@@ -62,8 +60,6 @@ formLivro.addEventListener("submit", function (event) {
     leitor.readAsDataURL(arquivo);
 });
 
-
-// Mostrar livros
 
 function mostrarLivros(lista = livros) {
 
@@ -131,8 +127,6 @@ function mostrarLivros(lista = livros) {
 }
 
 
-// Pesquisar livros
-
 pesquisa.addEventListener("input", function () {
 
     const textoPesquisa = pesquisa.value.toLowerCase();
@@ -149,8 +143,6 @@ pesquisa.addEventListener("input", function () {
     mostrarLivros(livrosFiltrados);
 });
 
-
-// Ver detalhes
 
 function verDetalhes(id) {
 
@@ -186,29 +178,17 @@ function verDetalhes(id) {
         <p class="detalhes-texto">
             ${livro.descricao || "Descrição não informada"}
         </p>
-
-        <h3 class="detalhes-subtitulo">
-            Resumo
-        </h3>
-
-        <p class="detalhes-texto">
-            Ainda não informado.
-        </p>
     `;
 
     modalDetalhes.style.display = "flex";
 }
 
 
-// Fechar modal
-
 fecharModal.addEventListener("click", function () {
 
     modalDetalhes.style.display = "none";
 });
 
-
-// Fechar clicando fora do modal
 
 modalDetalhes.addEventListener("click", function (event) {
 
@@ -218,8 +198,6 @@ modalDetalhes.addEventListener("click", function (event) {
     }
 });
 
-
-// Excluir livro
 
 function excluirLivro(id) {
 
@@ -237,12 +215,8 @@ function excluirLivro(id) {
 }
 
 
-// Mostrar livros ao abrir a página
-
 mostrarLivros();
 
-
-// Mudar tema
 
 let tema = 0;
 
