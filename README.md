@@ -2,24 +2,23 @@
 
 Projeto desenvolvido por Pedro Henrique Américo Brandão.
 
-Sua biblioteca digital pessoal — organize, pesquise e explore seus livros em um só lugar.
+Uma biblioteca digital pessoal para organizar, pesquisar e explorar livros em um só lugar.
 
 ## Acesse aqui
 
-[Estante Digital]([https://americobrandaop-boop.github.io/estante-digital/](https://estante-apb.netlify.app/))
+[**Estante Digital**](https://estante-apb.netlify.app/)
 
 ## Funcionalidades
 
-- Cadastro de livros com título, autor, ano, gênero, descrição e capa
-- Busca por título ou autor
-- Modal com detalhes de cada livro
-- 3 temas visuais: claro, escuro e papel
-- Armazenamento dos livros utilizando LocalStorage
+* Cadastro de livros com título, autor, ano, gênero, descrição e capa
+* Busca por título ou autor
+* Modal com detalhes de cada livro
+* 3 temas visuais: claro, escuro e papel
+* Armazenamento dos livros utilizando LocalStorage
 
 ## Screenshots
-https://americobrandaop-boop.github.io/estante-digital/
 
-### Tela inicial e cadastro
+### Cadastro de livro
 
 ![Cadastro de livro](./screenshots/cadastro.jpg)
 
@@ -27,14 +26,13 @@ https://americobrandaop-boop.github.io/estante-digital/
 
 ![Coleção de livros](./screenshots/colecao.jpg)
 
-
 ### Detalhes do livro
 
 ![Modal de detalhes](./screenshots/detalhes.jpg)
 
 ## Tecnologias
 
-- HTML5
-- CSS3
-- JavaScript
-- LocalStorage
+* HTML5
+* CSS3
+* JavaScript
+* LocalStorage
