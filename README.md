@@ -17,6 +17,7 @@ Sua biblioteca digital pessoal — organize, pesquise e explore seus livros em u
 - Armazenamento dos livros utilizando LocalStorage
 
 ## Screenshots
+https://americobrandaop-boop.github.io/estante-digital/
 
 ### Tela inicial e cadastro
 
@@ -26,9 +27,6 @@ Sua biblioteca digital pessoal — organize, pesquise e explore seus livros em u
 
 ![Coleção de livros](./screenshots/colecao.jpg)
 
-### Busca
-
-![Busca funcionando](./screenshots/busca.jpg)
 
 ### Detalhes do livro
 

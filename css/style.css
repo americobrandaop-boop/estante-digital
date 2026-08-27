@@ -1,29 +1,29 @@
 :root {
-    --cor-fundo: #f4f1ea;
-    --cor-card: #ffffff;
-    --cor-texto: #1f1f1f;
-    --cor-texto-secundario: #6b6b6b;
-    --cor-principal: #8b5e3c;
-    --cor-borda: #ded8cf;
+    --cor-fundo: #efe9dd;
+    --cor-card: #faf7ef;
+    --cor-texto: #1b2a3d;
+    --cor-texto-secundario: #5b6472;
+    --cor-principal: #a8452e;
+    --cor-borda: #d8cba8;
 }
 
 /* Temas */
 body[data-tema="escuro"] {
-    --cor-fundo: #1f1f1f;
-    --cor-card: #2b2b2b;
-    --cor-texto: #f5f5f5;
-    --cor-texto-secundario: #bdbdbd;
-    --cor-principal: #d49a6a;
-    --cor-borda: #444444;
+    --cor-fundo: #1b2a3d;
+    --cor-card: #24374d;
+    --cor-texto: #efe9dd;
+    --cor-texto-secundario: #a8b3c2;
+    --cor-principal: #c9a227;
+    --cor-borda: #3a4d63;
 }
 
 body[data-tema="papel"] {
-    --cor-fundo: #ddd0b8;
-    --cor-card: #f5ead8;
-    --cor-texto: #2d241c;
-    --cor-texto-secundario: #6b5c4d;
-    --cor-principal: #795334;
-    --cor-borda: #c7b79d;
+    --cor-fundo: #e4d5b7;
+    --cor-card: #f3e8ce;
+    --cor-texto: #3b2a1c;
+    --cor-texto-secundario: #7a6650;
+    --cor-principal: #a8452e;
+    --cor-borda: #c9b48b;
 }
 
 /* Reset */
@@ -34,7 +34,7 @@ body[data-tema="papel"] {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     transition: background-color 0.4s, color 0.4s;
@@ -42,6 +42,11 @@ body {
 
 button, input, textarea {
     font: inherit;
+}
+
+h1, h2, h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
 }
 
 .container {
@@ -63,22 +68,27 @@ button, input, textarea {
 .logo h1 {
     font-size: 2rem;
     color: var(--cor-principal);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .logo p {
     margin-top: 4px;
     color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
 }
 
 #botaoTema, .botao-adicionar {
-    border: 0;
-    background-color: var(--cor-principal);
-    color: white;
-    border-radius: 8px;
+    border: 1px solid var(--cor-principal);
+    background-color: transparent;
+    color: var(--cor-principal);
+    border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 #botaoTema {
@@ -91,8 +101,8 @@ button, input, textarea {
 }
 
 #botaoTema:hover, .botao-adicionar:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+    background-color: var(--cor-principal);
+    color: var(--cor-card);
 }
 
 .apresentacao {
@@ -112,12 +122,13 @@ button, input, textarea {
 .cadastro {
     background-color: var(--cor-card);
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 6px;
     border: 1px solid var(--cor-borda);
 }
 
 .cadastro h2 {
     margin-bottom: 24px;
+    font-size: 1.4rem;
 }
 
 #formLivro {
@@ -133,14 +144,18 @@ button, input, textarea {
 }
 
 .campo label {
-    font-weight: bold;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cor-texto-secundario);
 }
 
 .campo input, .campo textarea, #pesquisa {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--cor-borda);
-    border-radius: 8px;
+    border-radius: 4px;
     outline: none;
     color: var(--cor-texto);
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -158,7 +173,7 @@ button, input, textarea {
 
 .campo input:focus, .campo textarea:focus, #pesquisa:focus {
     border-color: var(--cor-principal);
-    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.15);
+    box-shadow: 0 0 0 3px rgba(168, 69, 46, 0.15);
 }
 
 .biblioteca {
@@ -170,6 +185,10 @@ button, input, textarea {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.biblioteca-topo h2 {
+    font-size: 1.4rem;
 }
 
 #pesquisa {
@@ -190,18 +209,17 @@ button, input, textarea {
     padding: 40px;
 }
 
+/* Card estilo "ficha de catálogo": borda fina, sem sombra, cantos quase retos */
 .livro {
     background-color: var(--cor-card);
     border: 1px solid var(--cor-borda);
-    border-radius: 12px;
+    border-radius: 3px;
     overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s;
 }
 
 .livro:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-color: var(--cor-principal);
 }
 
 .livro img {
@@ -209,7 +227,8 @@ button, input, textarea {
     height: 260px;
     object-fit: contain;
     display: block;
-    background-color: #e8e2d8;
+    background-color: var(--cor-fundo);
+    border-bottom: 1px solid var(--cor-borda);
 }
 
 .livro-info {
@@ -218,6 +237,7 @@ button, input, textarea {
 
 .livro-info h3 {
     margin-bottom: 8px;
+    font-size: 1.05rem;
 }
 
 .livro-info p {
@@ -226,23 +246,31 @@ button, input, textarea {
 }
 
 .livro-info span {
-    font-size: 0.9rem;
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
     color: var(--cor-principal);
 }
 
 .livro-info button {
     margin-top: 15px;
     padding: 8px 12px;
-    border: 0;
-    border-radius: 6px;
-    background-color: #b54848;
-    color: white;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--cor-texto);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: border-color 0.2s, color 0.2s;
 }
 
 .livro-info button:hover {
-    opacity: 0.8;
+    border-color: var(--cor-principal);
+    color: var(--cor-principal);
 }
 
 /* Modal */
@@ -250,7 +278,7 @@ button, input, textarea {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(27, 42, 61, 0.7);
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -265,20 +293,17 @@ button, input, textarea {
     background-color: var(--cor-card);
     color: var(--cor-texto);
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 6px;
     border: 1px solid var(--cor-borda);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    animation: aparecer 0.25s ease;
+    animation: aparecer 0.2s ease;
 }
 
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: scale(0.95);
     }
     to {
         opacity: 1;
-        transform: scale(1);
     }
 }
 
@@ -300,6 +325,7 @@ button, input, textarea {
 .detalhes-titulo {
     margin-bottom: 10px;
     color: var(--cor-principal);
+    font-size: 1.4rem;
 }
 
 .detalhes-autor {
@@ -308,6 +334,8 @@ button, input, textarea {
 }
 
 .detalhes-info {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85rem;
     color: var(--cor-principal);
     margin-bottom: 20px;
 }
@@ -315,6 +343,7 @@ button, input, textarea {
 .detalhes-subtitulo {
     margin-top: 20px;
     margin-bottom: 8px;
+    font-size: 1.05rem;
 }
 
 .detalhes-texto {
